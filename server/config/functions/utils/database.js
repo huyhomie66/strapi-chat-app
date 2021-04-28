@@ -6,7 +6,7 @@ const getUsersByUsernameAndRoom = async (username, name) => {
             username,
             // rooms: [{ name }],
         });
-        console.info("result", result);
+        return result;
     } catch (error) {
         console.info(error);
     }
@@ -41,6 +41,8 @@ const getUsersInRoom = async (name) => {
     try {
         const result = await strapi.services.users.find({ rooms: [{ name }] });
         console.info(result);
+
+        return result;
     } catch (error) {
         console.info(error);
     }
