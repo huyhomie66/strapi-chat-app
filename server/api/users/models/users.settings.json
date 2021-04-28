@@ -17,11 +17,13 @@
     "status": {
       "type": "string"
     },
-    "room": {
-      "type": "string"
-    },
     "socketId": {
       "type": "string"
+    },
+    "rooms": {
+      "collection": "room",
+      "via": "users",
+      "dominant": true
     }
   }
 }
